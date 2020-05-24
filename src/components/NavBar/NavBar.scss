@@ -1,0 +1,25 @@
+.NavBar {
+  color: red;
+  height: 60px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+  .NavBar_navigation {
+    display: flex;
+    align-items: center;
+    margin: 0 90px;
+    justify-content: space-between;
+    .NavBar_logo {
+      height: 60px;
+    }
+    .navigation-sub {
+      .item {
+        padding: 20px;
+        text-decoration: none;
+        cursor: pointer;
+        &:hover {
+          background: #CCCCCC;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}

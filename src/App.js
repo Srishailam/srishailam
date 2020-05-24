@@ -17,7 +17,7 @@ function App() {
           <Switch>
             <Route
               exact
-              path="/"
+              path="/srishailam/"
               render={() => {
                 return (
 

@@ -14,9 +14,9 @@ class NavBar extends Component {
     return (
       <header className="NavBar">
         <nav className="NavBar_navigation">
-          <Link to="/" className=""><img src={logo} className="NavBar_logo" alt="Logo" /></Link>
+          <Link to="/projects" className=""><img src={logo} className="NavBar_logo" alt="Logo" /></Link>
           <div className="navigation-sub">
-            <Link to="/" className="item">Projects</Link>
+            <Link to="/projects" className="item">Projects</Link>
             <Link to="/articles" className="item">Articles</Link>
             <Link to="/about-me" className="item">About Me</Link>
           </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import Projects from './components/Projects/Projects';
 import Articles from './components/Articles/Articles';
 import AboutMe from './components/AboutMe/AboutMe';
@@ -14,9 +14,21 @@ function App() {
       <div className="App">
         <NavBar />
         <Main>
-          <Route exact path="/" component={Projects} />
-          <Route path="/articles" component={Articles} />
-          <Route path="/about-me" component={AboutMe} />
+          <Switch>
+            <Route
+              exact
+              path="/"
+              render={() => {
+                return (
+
+                  <Redirect to="/projects" />
+                )
+              }}
+            />
+            <Route exact path="/projects" component={Projects} />
+            <Route path="/articles" component={Articles} />
+            <Route path="/about-me" component={AboutMe} />
+          </Switch>
         </Main>
         <Footer />
       </div>

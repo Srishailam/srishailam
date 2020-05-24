@@ -10,7 +10,7 @@ class Footer extends Component {
 
     return (
       <footer className="Footer">
-        Made with LOVE © {new Date().getFullYear()}.
+        Made with ❤️️ © {new Date().getFullYear()}.
       </footer>
     )
   }

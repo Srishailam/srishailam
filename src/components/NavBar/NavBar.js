@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './../../logo.svg';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import './NavBar.scss';
 
@@ -14,11 +14,11 @@ class NavBar extends Component {
     return (
       <header className="NavBar">
         <nav className="NavBar_navigation">
-          <Link to="/projects" className=""><img src={logo} className="NavBar_logo" alt="Logo" /></Link>
+          <NavLink to="/projects" className=""><img src={logo} className="NavBar_logo" alt="Logo" /></NavLink>
           <div className="navigation-sub">
-            <Link to="/projects" className="item">Projects</Link>
-            <Link to="/articles" className="item">Articles</Link>
-            <Link to="/about-me" className="item">About Me</Link>
+            <NavLink to="/projects" className="item" activeClassName="active">Projects</NavLink>
+            <NavLink to="/articles" className="item" activeClassName="active">Articles</NavLink>
+            <NavLink to="/about-me" className="item" activeClassName="active">About Me</NavLink>
           </div>
         </nav>
       </header>

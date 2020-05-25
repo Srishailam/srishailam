@@ -10,7 +10,7 @@ class Footer extends Component {
 
     return (
       <footer className="Footer">
-        Made with ❤️️ © {new Date().getFullYear()}.
+        Made with<span role="img" aria-label="heart"> ❤️️</span> © {new Date().getFullYear()}.
       </footer>
     )
   }

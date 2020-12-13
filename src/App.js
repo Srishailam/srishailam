@@ -7,11 +7,14 @@ import NavBar from './components/NavBar/NavBar';
 import Main from './components/Main/Main';
 import Footer from './components/Footer/Footer';
 import './App.css';
+import SideBar from './components/SideBar/SideBar';
+import Home from './components/Home/Home';
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
+        <SideBar />
         <NavBar />
         <Main>
           <Switch>
@@ -20,14 +23,14 @@ function App() {
               path="/srishailam/"
               render={() => {
                 return (
-
-                  <Redirect to="/projects" />
+                  <Redirect to="/home" />
                 )
               }}
             />
             <Route exact path="/projects" component={Projects} />
             <Route path="/articles" component={Articles} />
             <Route path="/about-me" component={AboutMe} />
+            <Route path="/" component={Home}></Route>
           </Switch>
         </Main>
         <Footer />
